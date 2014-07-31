@@ -1,6 +1,8 @@
-import urllib
+import requests
 
-r = urllib.request.urlopen('http://cartelcoffeelab.com')
-html = r.read()
+passing = {'auth_pass': 'cartel'}
+url = 'http://cartelcoffeelab.com'
+
+r = requests.get(url, params=passing)
 
 
