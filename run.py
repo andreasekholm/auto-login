@@ -1,8 +1,14 @@
+#!/usr/bin/python
+
 import requests
 
-passing = {'auth_pass': 'cartel'}
-url = 'http://cartelcoffeelab.com'
+# set login parameters and url
 
-r = requests.get(url, params=passing)
+payload = {'auth_pass': 'cartel'}
 
+url = 'http://192.168.3.1:8000/?redirurl=http%3A%2F%2Fgoogle.com%2F'
+
+r = requests.get(url, params=payload)
+
+print(r, url)
 
