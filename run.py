@@ -13,5 +13,5 @@ data = {
 r = requests.post(url, data=data)
 print r.status_code
 
-@retry(wait_fixed=2000000)
+#@retry(wait_fixed=0)
 
