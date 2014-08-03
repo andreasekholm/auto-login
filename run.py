@@ -27,7 +27,7 @@ data = {
         'accept': 'Continue'
         }
 
-def try_auth(url, data):
+def try_auth():
     r = requests.post(url, data=data)
     return r.status_code
 
@@ -43,6 +43,9 @@ class LoginQt(QtGui.QMainWindow):
         button.resize(button.sizeHint())
         button.clicked.connect(try_auth)
 
+        self.setGeometry(300, 300, 300, 300)
+        self.setWindowTitle('Cartel Auto Login')
+        self.show()
 
 def main():
     app = QtGui.QApplication(sys.argv)
